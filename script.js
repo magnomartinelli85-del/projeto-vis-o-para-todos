@@ -57,7 +57,7 @@ document.getElementById("restaurar").addEventListener("click", () => {
   aplicarTamanho();
   corpo.classList.remove("alto-contraste");
   document.getElementById("contraste").setAttribute("aria-pressed", "false");
-  speechSynthesis?.cancel();
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
   leituraAtiva = false;
   const botaoOuvir = document.getElementById("ouvir");
   botaoOuvir.textContent = "Ouvir página";
