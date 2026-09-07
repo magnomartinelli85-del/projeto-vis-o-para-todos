@@ -181,6 +181,11 @@ fieldset label { display: block; margin-top: .6rem; cursor: pointer; }
 .fontes ul { padding: 0 2.3rem 1rem; }
 .fontes a { color: var(--azul); font-weight: 800; }
 footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2rem clamp(1.25rem, 7vw, 7rem); background: #08251f; color: var(--branco); }
+.autoria-final { max-width: 68rem; }
+.autoria-final > p:first-child { margin: 0; font-size: 1.05rem; line-height: 1.65; }
+.autoria-final strong { color: var(--lima); }
+.selo-final { margin: .8rem 0 0; color: #b6ccc5; font-size: .85rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+footer > a { align-self: flex-start; color: var(--branco); font-weight: 900; white-space: nowrap; }
 
 body.alto-contraste { --creme: #000; --verde: #fff; --verde-claro: #fff; --lima: #ff0; --laranja: #0ff; --azul: #ff0; --tinta: #fff; --branco: #000; --borda: #fff; --sombra: none; }
 body.alto-contraste .topo, body.alto-contraste .robotica, body.alto-contraste footer { background: #000; border-bottom: 2px solid #fff; }
