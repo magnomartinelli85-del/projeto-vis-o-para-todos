@@ -10,7 +10,7 @@ function aplicarTamanho() {
 }
 
 document.getElementById("aumentarFonte").addEventListener("click", () => {
-  tamanhoFonte = limitar(tamanhoFonte + 10, 80, 140);
+  tamanhoFonte = limitar(tamanhoFonte + 10, 80, 200);
   aplicarTamanho();
 });
 
@@ -108,6 +108,57 @@ function atualizarSensor() {
 }
 distancia.addEventListener("input", atualizarSensor);
 atualizarSensor();
+
+const amostraInterface = document.getElementById("amostraInterface");
+const barreiras = {
+  barreiraContraste: "barreira-contraste",
+  barreiraDesfoque: "barreira-desfoque",
+  barreiraEspacamento: "barreira-espacamento"
+};
+
+Object.entries(barreiras).forEach(([id, classe]) => {
+  document.getElementById(id).addEventListener("change", (evento) => {
+    amostraInterface.classList.toggle(classe, evento.currentTarget.checked);
+  });
+});
+
+document.getElementById("corrigirBarreiras").addEventListener("click", () => {
+  Object.entries(barreiras).forEach(([id, classe]) => {
+    document.getElementById(id).checked = false;
+    amostraInterface.classList.remove(classe);
+  });
+  amostraInterface.focus({ preventScroll: true });
+});
+
+const atlas = {
+  luz: {
+    titulo: "Luz: onda e partícula",
+    texto: "A luz apresenta comportamento ondulatório em fenômenos como reflexão, interferência e difração. Ao interagir com a matéria, também pode ser descrita como fótons: pacotes de energia cuja energia cresce com a frequência."
+  },
+  olho: {
+    titulo: "Do fóton à percepção",
+    texto: "A córnea participa fortemente da refração da luz; o cristalino ajusta o foco e a retina transforma energia luminosa em sinais. O cérebro interpreta esses sinais. Enxergar é, portanto, um processo óptico, biológico e neurológico."
+  },
+  optica: {
+    titulo: "Óptica que modifica ambientes",
+    texto: "Luz natural, difusores, superfícies antirreflexo e iluminação uniforme podem reduzir ofuscamento e fadiga visual. Em escolas, uma boa solução considera posição das luminárias, contraste e reflexos nas telas e lousas."
+  },
+  condicoes: {
+    titulo: "Diferentes condições, diferentes barreiras",
+    texto: "Baixa visão, cegueira, catarata, erros de refração e alterações na percepção de cores não produzem a mesma experiência. Uma interface inclusiva oferece alternativas e não pressupõe uma única forma de perceber."
+  }
+};
+
+document.querySelectorAll(".atlas-aba").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    document.querySelectorAll(".atlas-aba").forEach((item) => item.classList.remove("ativa"));
+    botao.classList.add("ativa");
+    const item = atlas[botao.dataset.atlas];
+    const painel = document.getElementById("atlasConteudo");
+    painel.innerHTML = `<p class="etiqueta">Conceito-chave</p><h3>${item.titulo}</h3><p>${item.texto}</p>`;
+    painel.focus({ preventScroll: true });
+  });
+});
 
 document.getElementById("quizForm").addEventListener("submit", (evento) => {
   evento.preventDefault();
