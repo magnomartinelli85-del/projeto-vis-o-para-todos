@@ -20,9 +20,9 @@
       <button class="menu-botao" id="menuBotao" aria-expanded="false" aria-controls="menu">Menu</button>
       <ul id="menu">
         <li><a href="#inicio">Início</a></li>
+        <li><a href="#programacao">Programação</a></li>
         <li><a href="#fisica">Física</a></li>
         <li><a href="#robotica">Robótica</a></li>
-        <li><a href="#programacao">Programação</a></li>
         <li><a href="#projeto">Projeto</a></li>
       </ul>
     </nav>
@@ -40,27 +40,93 @@
   <main id="conteudo">
     <section class="hero" id="inicio">
       <div class="hero-texto">
-        <p class="etiqueta">Projeto Integrador • 2ª série</p>
-        <h1>Ciência e tecnologia transformando informação em autonomia.</h1>
-        <p>Uma experiência criada a partir de três áreas que se completam: a Física explica a luz e a visão, a Robótica desenvolve soluções assistivas e a Programação conecta todo o conhecimento em um site acessível.</p>
-        <a class="botao-destaque" href="#jornada">Começar a jornada</a>
+        <p class="etiqueta">Projeto-laboratório • Programação • 2ª série</p>
+        <h1>Não criamos apenas um site. Criamos uma interface que <em>remove barreiras.</em></h1>
+        <p>A Programação é o núcleo deste projeto: transforma descobertas da Física e protótipos da Robótica em experiências digitais que podem ser percebidas, operadas e compreendidas por mais pessoas.</p>
+        <div class="hero-acoes">
+          <a class="botao-destaque" href="#programacao">Entrar no laboratório</a>
+          <a class="botao-linha" href="#mapa-impacto">Ver mapa de impacto</a>
+        </div>
+        <p class="dica-teclado"><kbd>Tab</kbd> Experimente navegar sem usar o mouse.</p>
       </div>
-      <div class="olho" role="img" aria-label="Ilustração abstrata de um olho, representando visão e tecnologia">
-        <span class="pupila"></span>
-        <span class="pulso pulso-1"></span>
-        <span class="pulso pulso-2"></span>
+      <div class="central-visual" aria-label="Painel que conecta Programação, Física e Robótica">
+        <p>CENTRAL DE INCLUSÃO</p>
+        <strong>PROGRAMAÇÃO</strong>
+        <div class="conexoes">
+          <span>Física<br><small>compreende</small></span>
+          <i aria-hidden="true">+</i>
+          <span>Robótica<br><small>materializa</small></span>
+          <i aria-hidden="true">=</i>
+          <span>Acesso<br><small>transforma</small></span>
+        </div>
+        <div class="linha-sinal" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div>
       </div>
     </section>
 
     <section class="secao jornada" id="jornada">
       <div class="cabecalho-secao">
-        <p class="etiqueta">Três conhecimentos, um propósito</p>
-        <h2>Como as disciplinas se encontram?</h2>
+        <p class="etiqueta">Ecossistema interdisciplinar</p>
+        <h2>Programação transforma conhecimento em solução.</h2>
       </div>
       <div class="trilha">
-        <a class="passo" href="#fisica"><span>1</span><strong>Física</strong><small>Compreender a luz e a visão</small></a>
-        <a class="passo" href="#robotica"><span>2</span><strong>Robótica</strong><small>Construir soluções assistivas</small></a>
-        <a class="passo" href="#programacao"><span>3</span><strong>Programação</strong><small>Compartilhar conhecimento com acessibilidade</small></a>
+        <a class="passo principal" href="#programacao"><span>NÚCLEO</span><strong>Programação</strong><small>Projeta a experiência, integra soluções e testa acessibilidade</small></a>
+        <a class="passo" href="#fisica"><span>BASE</span><strong>Física e Tecnociência</strong><small>Explica luz, visão, óptica e sensores</small></a>
+        <a class="passo" href="#robotica"><span>PROTÓTIPO</span><strong>Robótica</strong><small>Materializa ideias com Arduino, sensores e alertas</small></a>
+      </div>
+    </section>
+
+    <section class="secao laboratorio" id="programacao">
+      <div class="cabecalho-secao">
+        <p class="etiqueta">Eixo central • Programação</p>
+        <h2>Laboratório de interfaces acessíveis</h2>
+        <p>O código não aparece apenas nos bastidores. Ele reorganiza a informação, oferece alternativas de percepção e permite que cada pessoa escolha como deseja acessar o conteúdo.</p>
+      </div>
+
+      <div class="painel-metricas" aria-label="Dimensões do projeto de Programação">
+        <div><strong>3</strong><span>linguagens conectadas</span></div>
+        <div><strong>6</strong><span>soluções digitais</span></div>
+        <div><strong>4</strong><span>princípios de acessibilidade</span></div>
+        <div><strong>1</strong><span>produto integrador</span></div>
+      </div>
+
+      <div class="matriz-solucoes">
+        <article class="solucao solucao-destaque">
+          <span>01</span><h3>Arquitetura semântica</h3>
+          <p>Títulos, regiões, listas e botões com funções claras ajudam pessoas, navegadores e leitores de tela a compreender a página.</p>
+          <code>&lt;main aria-label="Conteúdo"&gt;</code>
+        </article>
+        <article class="solucao"><span>02</span><h3>Contraste adaptável</h3><p>A interface altera cores sem perder informação ou depender somente da cor.</p></article>
+        <article class="solucao"><span>03</span><h3>Texto redimensionável</h3><p>Conteúdo e controles crescem sem sobreposição, corte ou perda de função.</p></article>
+        <article class="solucao"><span>04</span><h3>Navegação por teclado</h3><p>Ordem lógica de foco, contorno visível e ativação com Enter ou Espaço.</p></article>
+        <article class="solucao"><span>05</span><h3>Conteúdo multimodal</h3><p>A mesma ideia pode chegar por texto, voz, contraste, estrutura e interação.</p></article>
+        <article class="solucao"><span>06</span><h3>Design responsivo</h3><p>O conteúdo se reorganiza em telas menores e com grande ampliação.</p></article>
+      </div>
+
+      <div class="auditoria" id="auditoria">
+        <div class="auditoria-controles">
+          <p class="etiqueta">Experimento interativo</p>
+          <h3>Auditoria de barreiras</h3>
+          <p>Observe como decisões ruins de design podem impedir o acesso. Ative cada barreira e depois use os recursos do topo para tentar recuperar a experiência.</p>
+          <div class="switches">
+            <label><input type="checkbox" id="barreiraContraste"> Baixo contraste</label>
+            <label><input type="checkbox" id="barreiraDesfoque"> Visão desfocada</label>
+            <label><input type="checkbox" id="barreiraEspacamento"> Texto apertado</label>
+          </div>
+          <button type="button" class="botao-destaque" id="corrigirBarreiras">Aplicar design inclusivo</button>
+        </div>
+        <div class="amostra-interface" id="amostraInterface" tabindex="-1">
+          <span class="status">SIMULAÇÃO</span>
+          <h3>Informação precisa ser percebida</h3>
+          <p>Quando contraste, tamanho e espaçamento falham, o conteúdo continua existindo — mas deixa de estar realmente disponível.</p>
+          <button type="button">Ação importante</button>
+        </div>
+      </div>
+
+      <div class="principios" id="mapa-impacto">
+        <div class="principio"><span>P</span><strong>Perceptível</strong><small>A informação pode ser percebida por diferentes sentidos.</small></div>
+        <div class="principio"><span>O</span><strong>Operável</strong><small>Controles funcionam com teclado, toque e tecnologias assistivas.</small></div>
+        <div class="principio"><span>C</span><strong>Compreensível</strong><small>Textos, caminhos e respostas são claros e previsíveis.</small></div>
+        <div class="principio"><span>R</span><strong>Robusto</strong><small>O código conversa com navegadores e leitores de tela.</small></div>
       </div>
     </section>
 
@@ -86,6 +152,18 @@
           <span class="card-icone" aria-hidden="true">⚡</span>
           <h3>Efeito fotoelétrico</h3>
           <p>Mostra que a luz pode transferir energia aos elétrons. Essa descoberta ajudou a criar sensores e células solares.</p>
+        </article>
+      </div>
+
+      <div class="atlas-cientifico">
+        <button type="button" class="atlas-aba ativa" data-atlas="luz">Luz</button>
+        <button type="button" class="atlas-aba" data-atlas="olho">Olho humano</button>
+        <button type="button" class="atlas-aba" data-atlas="optica">Óptica aplicada</button>
+        <button type="button" class="atlas-aba" data-atlas="condicoes">Condições visuais</button>
+        <article id="atlasConteudo" tabindex="-1">
+          <p class="etiqueta">Conceito-chave</p>
+          <h3>Luz: onda e partícula</h3>
+          <p>A luz apresenta comportamento ondulatório em fenômenos como reflexão, interferência e difração. Ao interagir com a matéria, também pode ser descrita como fótons: pacotes de energia cuja energia cresce com a frequência.</p>
         </article>
       </div>
 
@@ -132,6 +210,13 @@
         </div>
       </div>
 
+      <div class="circuito-logico" aria-label="Fluxo de funcionamento de uma tecnologia assistiva">
+        <div><span>1</span><strong>Perceber</strong><small>Sensor mede a distância</small></div>
+        <div><span>2</span><strong>Processar</strong><small>Placa interpreta o valor</small></div>
+        <div><span>3</span><strong>Decidir</strong><small>Código compara com o limite</small></div>
+        <div><span>4</span><strong>Comunicar</strong><small>Buzzer ou vibração alerta</small></div>
+      </div>
+
       <div class="cards equipes">
         <article class="card equipe">
           <span class="numero">Equipe 1</span>
@@ -160,17 +245,23 @@
       </div>
     </section>
 
-    <section class="secao programacao" id="programacao">
+    <section class="secao programacao arquitetura" id="arquitetura">
       <div class="cabecalho-secao">
-        <p class="etiqueta">Programação</p>
-        <h2>O conhecimento ganha forma digital</h2>
-        <p>Este site usa três linguagens que trabalham juntas. Além de organizar o projeto, o código oferece recursos que tornam o conteúdo mais acessível.</p>
+        <p class="etiqueta">Por dentro do produto</p>
+        <h2>Três camadas, uma experiência</h2>
+        <p>O produto central foi estruturado para que os estudantes possam localizar, compreender, testar e modificar o código — não apenas observar uma página pronta.</p>
       </div>
       <div class="cards cards-3 codigo-cards">
         <article class="card"><code>&lt;HTML&gt;</code><h3>Estrutura</h3><p>Organiza títulos, textos, botões, links e seções.</p></article>
         <article class="card"><code>{ CSS }</code><h3>Aparência</h3><p>Define cores, contraste, tamanhos e adaptação ao celular.</p></article>
         <article class="card"><code>JavaScript( )</code><h3>Comportamento</h3><p>Controla fonte, contraste, leitura em voz alta, quiz e simuladores.</p></article>
       </div>
+    </section>
+
+    <section class="secao manifesto">
+      <p class="etiqueta">Ideia-força</p>
+      <blockquote>“Deficiência não está apenas no corpo. Muitas barreiras são criadas pelo ambiente — e o código também constrói ambientes.”</blockquote>
+      <p>Por isso, programar para incluir não é adicionar um recurso ao final. É tomar decisões acessíveis desde a estrutura inicial.</p>
     </section>
 
     <section class="secao quiz" id="quiz">
@@ -215,6 +306,14 @@
         <p><strong>Robótica:</strong> Professor Raian e estudantes da 2ª série</p>
         <p><strong>Crédito pedagógico:</strong> protótipo orientado pelos professores, desenvolvido com apoio de ferramentas digitais e aprimorado pelos estudantes.</p>
       </div>
+      <details class="fontes">
+        <summary>Referências científicas e de acessibilidade</summary>
+        <ul>
+          <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">W3C — Diretrizes de Acessibilidade para Conteúdo Web 2.2</a></li>
+          <li><a href="https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment" target="_blank" rel="noopener">Organização Mundial da Saúde — Deficiência visual e cegueira</a></li>
+          <li><a href="https://docs.arduino.cc/hardware/modulino-distance/" target="_blank" rel="noopener">Arduino — Medição de distância por sensor</a></li>
+        </ul>
+      </details>
     </section>
   </main>
 
