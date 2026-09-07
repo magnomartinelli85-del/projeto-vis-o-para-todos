@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projeto Integrador Visão para Todos: Programação, Física e Tecnociência e Robótica em favor da acessibilidade visual.">
+  <title>Visão para Todos | Projeto Integrador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Visão para Todos — início">
+      <span class="marca-icone" aria-hidden="true">◉</span>
+      <span>Visão para Todos</span>
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <button class="menu-botao" id="menuBotao" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#fisica">Física</a></li>
+        <li><a href="#robotica">Robótica</a></li>
+        <li><a href="#programacao">Programação</a></li>
+        <li><a href="#projeto">Projeto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="barra-acessibilidade" aria-label="Ferramentas de acessibilidade">
+    <span>Acessibilidade:</span>
+    <button id="aumentarFonte" type="button" aria-label="Aumentar o tamanho do texto">A+</button>
+    <button id="diminuirFonte" type="button" aria-label="Diminuir o tamanho do texto">A−</button>
+    <button id="contraste" type="button" aria-pressed="false">Alto contraste</button>
+    <button id="ouvir" type="button" aria-pressed="false">Ouvir página</button>
+    <button id="restaurar" type="button">Restaurar</button>
+  </section>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-texto">
+        <p class="etiqueta">Projeto Integrador • 2ª série</p>
+        <h1>Ciência e tecnologia transformando informação em autonomia.</h1>
+        <p>Uma experiência criada a partir de três áreas que se completam: a Física explica a luz e a visão, a Robótica desenvolve soluções assistivas e a Programação conecta todo o conhecimento em um site acessível.</p>
+        <a class="botao-destaque" href="#jornada">Começar a jornada</a>
+      </div>
+      <div class="olho" role="img" aria-label="Ilustração abstrata de um olho, representando visão e tecnologia">
+        <span class="pupila"></span>
+        <span class="pulso pulso-1"></span>
+        <span class="pulso pulso-2"></span>
+      </div>
+    </section>
+
+    <section class="secao jornada" id="jornada">
+      <div class="cabecalho-secao">
+        <p class="etiqueta">Três conhecimentos, um propósito</p>
+        <h2>Como as disciplinas se encontram?</h2>
+      </div>
+      <div class="trilha">
+        <a class="passo" href="#fisica"><span>1</span><strong>Física</strong><small>Compreender a luz e a visão</small></a>
+        <a class="passo" href="#robotica"><span>2</span><strong>Robótica</strong><small>Construir soluções assistivas</small></a>
+        <a class="passo" href="#programacao"><span>3</span><strong>Programação</strong><small>Compartilhar conhecimento com acessibilidade</small></a>
+      </div>
+    </section>
+
+    <section class="secao fisica" id="fisica">
+      <div class="cabecalho-secao">
+        <p class="etiqueta">Física e Tecnociência</p>
+        <h2>A jornada da luz</h2>
+        <p>A luz pode se comportar como onda e como partícula. Os “pacotes” de energia da luz são chamados de fótons. Quando a luz entra no olho, estruturas como a córnea ajudam a direcioná-la para formar a imagem.</p>
+      </div>
+
+      <div class="cards cards-3">
+        <article class="card">
+          <span class="card-icone" aria-hidden="true">☀</span>
+          <h3>Luz</h3>
+          <p>Transporta energia e torna possível perceber formas, cores e movimentos.</p>
+        </article>
+        <article class="card">
+          <span class="card-icone" aria-hidden="true">◉</span>
+          <h3>Córnea</h3>
+          <p>É transparente, protege a parte frontal do olho e participa do direcionamento da luz.</p>
+        </article>
+        <article class="card">
+          <span class="card-icone" aria-hidden="true">⚡</span>
+          <h3>Efeito fotoelétrico</h3>
+          <p>Mostra que a luz pode transferir energia aos elétrons. Essa descoberta ajudou a criar sensores e células solares.</p>
+        </article>
+      </div>
+
+      <div class="experimento-luz">
+        <div>
+          <p class="etiqueta">Experimente</p>
+          <h3>Qual iluminação facilita a leitura?</h3>
+          <p>Altere a intensidade e observe como o texto se comporta. Pouca luz dificulta a leitura; luz excessiva pode causar ofuscamento.</p>
+          <label for="controleLuz">Intensidade da luz</label>
+          <input id="controleLuz" type="range" min="10" max="100" value="65">
+        </div>
+        <div class="painel-leitura" id="painelLeitura">
+          <strong>Leitura confortável</strong>
+          <p>Um ambiente acessível combina iluminação uniforme, bom contraste e ausência de reflexos.</p>
+          <span id="nivelLuz" aria-live="polite">65% de iluminação</span>
+        </div>
+      </div>
+
+      <details class="saiba-mais">
+        <summary>Curiosidade: a luz é onda ou partícula?</summary>
+        <p>As duas descrições são necessárias. Em alguns fenômenos a luz apresenta comportamento ondulatório; em outros, interage como partículas chamadas fótons. Essa ideia é conhecida como dualidade onda-partícula.</p>
+      </details>
+    </section>
+
+    <section class="secao robotica" id="robotica">
+      <div class="cabecalho-secao">
+        <p class="etiqueta">Robótica</p>
+        <h2>Protótipos que ampliam a autonomia</h2>
+        <p>As equipes utilizaram sensores, sinais sonoros e placas de controle para imaginar soluções que identificam obstáculos e tornam os deslocamentos mais seguros.</p>
+      </div>
+
+      <div class="simulador">
+        <div>
+          <p class="etiqueta">Simulador de sensor</p>
+          <h3>Aproxime o objeto</h3>
+          <p>Mova o controle. Quanto menor a distância, mais urgente será o alerta do sensor.</p>
+          <label for="distancia">Distância do obstáculo</label>
+          <input id="distancia" type="range" min="5" max="100" value="80">
+        </div>
+        <div class="sensor-visual">
+          <div class="ondas" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="obstaculo" id="obstaculo" aria-hidden="true"></div>
+          <p id="alertaSensor" class="sensor-seguro" aria-live="polite">80 cm — caminho livre</p>
+        </div>
+      </div>
+
+      <div class="cards equipes">
+        <article class="card equipe">
+          <span class="numero">Equipe 1</span>
+          <h3>Bengala com sensor</h3>
+          <p>Um sensor de distância identifica obstáculos e aciona um buzzer, contribuindo para a segurança durante o deslocamento.</p>
+          <span class="registro">Registro produzido pela equipe</span>
+        </article>
+        <article class="card equipe">
+          <span class="numero">Equipe 2</span>
+          <h3>Porta automática acessível</h3>
+          <p>Sensores de presença e fotocélulas mantêm a passagem segura para pessoas, bengalas longas e cães-guia.</p>
+          <span class="registro">Registro produzido pela equipe</span>
+        </article>
+        <article class="card equipe">
+          <span class="numero">Equipe 3</span>
+          <h3>Alerta de proximidade</h3>
+          <p>Um dispositivo emite som quando detecta algo próximo, transformando distância em uma informação auditiva.</p>
+          <span class="registro">Registro produzido pela equipe</span>
+        </article>
+        <article class="card equipe">
+          <span class="numero">Equipe 4</span>
+          <h3>Óculos com sensor Arduino</h3>
+          <p>O protótipo utiliza um sensor para perceber objetos próximos e produzir um aviso sonoro ao usuário.</p>
+          <span class="registro">Registro produzido pela equipe</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao programacao" id="programacao">
+      <div class="cabecalho-secao">
+        <p class="etiqueta">Programação</p>
+        <h2>O conhecimento ganha forma digital</h2>
+        <p>Este site usa três linguagens que trabalham juntas. Além de organizar o projeto, o código oferece recursos que tornam o conteúdo mais acessível.</p>
+      </div>
+      <div class="cards cards-3 codigo-cards">
+        <article class="card"><code>&lt;HTML&gt;</code><h3>Estrutura</h3><p>Organiza títulos, textos, botões, links e seções.</p></article>
+        <article class="card"><code>{ CSS }</code><h3>Aparência</h3><p>Define cores, contraste, tamanhos e adaptação ao celular.</p></article>
+        <article class="card"><code>JavaScript( )</code><h3>Comportamento</h3><p>Controla fonte, contraste, leitura em voz alta, quiz e simuladores.</p></article>
+      </div>
+    </section>
+
+    <section class="secao quiz" id="quiz">
+      <div class="cabecalho-secao">
+        <p class="etiqueta">Desafio final</p>
+        <h2>Teste o que você descobriu</h2>
+      </div>
+      <form id="quizForm">
+        <fieldset>
+          <legend>1. Qual componente pode avisar, por meio de som, que existe um obstáculo próximo?</legend>
+          <label><input type="radio" name="q1" value="a"> Buzzer</label>
+          <label><input type="radio" name="q1" value="b"> Tela</label>
+          <label><input type="radio" name="q1" value="c"> Teclado</label>
+        </fieldset>
+        <fieldset>
+          <legend>2. Como chamamos os pacotes de energia da luz?</legend>
+          <label><input type="radio" name="q2" value="a"> Pixels</label>
+          <label><input type="radio" name="q2" value="b"> Fótons</label>
+          <label><input type="radio" name="q2" value="c"> Circuitos</label>
+        </fieldset>
+        <fieldset>
+          <legend>3. Qual linguagem controla o comportamento dos botões deste site?</legend>
+          <label><input type="radio" name="q3" value="a"> CSS</label>
+          <label><input type="radio" name="q3" value="b"> HTML</label>
+          <label><input type="radio" name="q3" value="c"> JavaScript</label>
+        </fieldset>
+        <button class="botao-destaque" type="submit">Conferir respostas</button>
+        <p id="resultadoQuiz" class="resultado" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="secao projeto" id="projeto">
+      <div class="cabecalho-secao">
+        <p class="etiqueta">Projeto Integrador</p>
+        <h2>Aprender, construir e compartilhar</h2>
+        <p>Produção interdisciplinar da 2ª série, integrando Programação, Física e Tecnociência e Robótica para investigar como a tecnologia pode reduzir barreiras enfrentadas por pessoas cegas ou com baixa visão.</p>
+      </div>
+      <div class="creditos">
+        <p><strong>Instituição:</strong> Colégio Estadual Santana de Tapejara</p>
+        <p><strong>Programação:</strong> Professor Magno Martinelli</p>
+        <p><strong>Física e Tecnociência:</strong> Professor Renan</p>
+        <p><strong>Robótica:</strong> professor responsável e estudantes da 2ª série</p>
+        <p><strong>Crédito pedagógico:</strong> protótipo orientado pelos professores, desenvolvido com apoio de ferramentas digitais e aprimorado pelos estudantes.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Visão para Todos • Tecnologia, ciência e inclusão</p>
+    <a href="#inicio">Voltar ao início</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
