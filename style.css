@@ -37,6 +37,7 @@ nav a:hover { background: rgba(255,255,255,.13); }
 
 .hero { min-height: 76vh; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr); align-items: center; gap: clamp(2rem, 5vw, 6rem); padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 7vw, 7rem); overflow: hidden; }
 .hero-texto { max-width: 48rem; }
+.hero-etiqueta { max-width: 40rem; padding-left: .8rem; border-left: .28rem solid var(--laranja); }
 .etiqueta { margin: 0 0 .5rem; color: var(--verde-claro); font-weight: 900; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
 h1, h2, h3 { color: var(--verde); line-height: 1.08; }
 h1 em { color: var(--azul); font-style: normal; }
@@ -44,6 +45,11 @@ h1 { margin: .4rem 0 1.5rem; font-size: clamp(2.7rem, 6vw, 5.8rem); letter-spaci
 h2 { margin: .3rem 0 1rem; font-size: clamp(2rem, 4vw, 4rem); letter-spacing: -.04em; }
 h3 { margin: .6rem 0; font-size: 1.35rem; }
 .hero p:not(.etiqueta) { max-width: 45rem; font-size: 1.15rem; }
+.hero h1 { margin-bottom: .65rem; font-size: clamp(3.5rem, 8vw, 7.4rem); }
+.hero h1 em { color: var(--verde); }
+.identificacao-escola { width: max-content; max-width: 100% !important; margin: 0 0 1.4rem; padding: .45rem .7rem; border-radius: .45rem; color: var(--branco); background: var(--verde); font-size: .9rem !important; font-weight: 900; }
+.hero-introducao { margin-bottom: .8rem; color: var(--verde); font-size: 1.2rem !important; line-height: 1.55; }
+.hero-complemento { color: #38544e; font-size: 1rem !important; }
 .botao-destaque { display: inline-block; border: 0; margin-top: 1rem; padding: .9rem 1.25rem; border-radius: .75rem; background: var(--laranja); color: #20120d; font-weight: 900; text-decoration: none; cursor: pointer; box-shadow: 0 8px 0 #c84f2f; }
 .botao-destaque:active { transform: translateY(4px); box-shadow: 0 4px 0 #c84f2f; }
 .hero-acoes { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 1.3rem; }
@@ -71,6 +77,9 @@ kbd { display: inline-block; padding: .15rem .45rem; border: 1px solid var(--ver
 .cabecalho-secao { max-width: 55rem; margin-bottom: 2.25rem; }
 .cabecalho-secao > p:last-child { font-size: 1.08rem; }
 .jornada, .programacao { background: var(--branco); }
+.autoria-projeto { max-width: 55rem; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 1rem; margin: -1rem 0 2rem; padding: 1rem 1.2rem; border: 1px solid var(--borda); border-radius: .9rem; background: var(--creme); }
+.autoria-projeto span { padding: .35rem .55rem; border-radius: .35rem; color: var(--verde); background: var(--lima); font-size: .75rem; font-weight: 900; letter-spacing: .08em; }
+.autoria-projeto p { margin: 0; }
 .trilha { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 1rem; }
 .passo { min-height: 12rem; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: var(--branco); background: var(--verde); border-radius: 1.25rem; text-decoration: none; box-shadow: var(--sombra); }
 .passo:nth-child(2) { background: #2f55db; }
@@ -208,6 +217,7 @@ body.alto-contraste .sensor-visual { background: #000; border-color: #fff; }
   .barra-acessibilidade > span { width: 100%; }
   h1 { font-size: clamp(2.35rem, 13vw, 3.6rem); }
   .hero, .secao { padding-left: 1rem; padding-right: 1rem; }
+  .autoria-projeto { grid-template-columns: 1fr; }
   footer { flex-direction: column; }
   .matriz-solucoes, .painel-metricas, .principios, .circuito-logico { grid-template-columns: 1fr; }
   .solucao-destaque { grid-column: auto; }
