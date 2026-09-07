@@ -116,10 +116,16 @@ body.alto-contraste .topo, body.alto-contraste .robotica, body.alto-contraste fo
 body.alto-contraste .passo { background: #000; border: 2px solid #fff; }
 body.alto-contraste .fisica, body.alto-contraste .quiz { background: #000; }
 body.alto-contraste .botao-destaque { color: #000; }
+body.alto-contraste .barra-acessibilidade { color: #000; }
+body.alto-contraste .barra-acessibilidade button { color: #000; border-color: #000; }
+body.alto-contraste .barra-acessibilidade button:hover { color: #fff; background: #000; }
+body.alto-contraste .painel-leitura { color: #fff !important; background: #000 !important; border: 2px solid #fff; }
+body.alto-contraste .sensor-visual { background: #000; border-color: #fff; }
 
 @media (max-width: 860px) {
   .menu-botao { display: block; border: 2px solid var(--branco); border-radius: .5rem; padding: .45rem .7rem; background: transparent; color: var(--branco); font-weight: 800; }
   nav ul { display: none; position: absolute; left: 1rem; right: 1rem; top: calc(100% - .35rem); flex-direction: column; padding: .75rem; border-radius: .8rem; background: var(--verde); box-shadow: var(--sombra); }
+  body.alto-contraste nav ul { background: #000; border: 2px solid #fff; }
   nav ul.aberto { display: flex; }
   .hero { min-height: auto; grid-template-columns: 1fr; }
   .olho { width: min(75vw, 24rem); }
