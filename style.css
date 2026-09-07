@@ -98,7 +98,7 @@ input[type="range"] { width: 100%; accent-color: var(--laranja); }
 .sensor-atencao { background: #ffe69b; color: #4d3900; }
 .sensor-perigo { background: #ffb7ae; color: #5a1108; }
 .numero { display: inline-block; padding: .25rem .55rem; border-radius: 999px; background: var(--lima); color: var(--verde); font-size: .85rem; font-weight: 900; }
-.equipe a { font-weight: 900; color: var(--azul); }
+.registro { display: inline-block; margin-top: .4rem; color: var(--verde-claro); font-weight: 900; }
 
 .codigo-cards code { display: inline-block; padding: .4rem .65rem; border-radius: .5rem; color: var(--verde); background: var(--lima); font-weight: 900; font-size: 1.1rem; }
 .quiz { background: #fff0ea; }
