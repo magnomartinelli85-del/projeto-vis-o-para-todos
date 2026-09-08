@@ -13,8 +13,10 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: var(--tamanho-fonte); }
-body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--tinta); background: var(--creme); line-height: 1.65; }
+html { max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; font-size: var(--tamanho-fonte); }
+body { max-width: 100%; margin: 0; overflow-x: hidden; font-family: Arial, Helvetica, sans-serif; color: var(--tinta); background: var(--creme); line-height: 1.65; }
+img, svg, video { max-width: 100%; height: auto; }
+p, li, a, code, summary { overflow-wrap: anywhere; }
 a { color: inherit; }
 button, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -36,7 +38,7 @@ nav a:hover { background: rgba(255,255,255,.13); }
 .barra-acessibilidade button:hover { background: var(--verde); color: var(--branco); }
 
 .hero { min-height: 76vh; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr); align-items: center; gap: clamp(2rem, 5vw, 6rem); padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 7vw, 7rem); overflow: hidden; }
-.hero-texto { max-width: 48rem; }
+.hero-texto { min-width: 0; max-width: 48rem; }
 .hero-etiqueta { max-width: 40rem; padding-left: .8rem; border-left: .28rem solid var(--laranja); }
 .etiqueta { margin: 0 0 .5rem; color: var(--verde-claro); font-weight: 900; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
 h1, h2, h3 { color: var(--verde); line-height: 1.08; }
@@ -57,11 +59,11 @@ h3 { margin: .6rem 0; font-size: 1.35rem; }
 .dica-teclado { margin-top: 1.4rem; font-size: .92rem !important; }
 kbd { display: inline-block; padding: .15rem .45rem; border: 1px solid var(--verde); border-bottom-width: 3px; border-radius: .35rem; background: var(--branco); font-weight: 900; }
 
-.central-visual { width: min(100%, 34rem); justify-self: center; padding: 1.2rem; border: 2px solid var(--verde); border-radius: 1.4rem; color: var(--branco); background: #071f1a; box-shadow: 1rem 1rem 0 var(--lima); }
+.central-visual { min-width: 0; width: min(100%, 34rem); justify-self: center; padding: 1.2rem; border: 2px solid var(--verde); border-radius: 1.4rem; color: var(--branco); background: #071f1a; box-shadow: 1rem 1rem 0 var(--lima); }
 .central-visual > p { margin: 0 0 1.2rem; color: var(--lima); font-size: .75rem !important; font-weight: 900; letter-spacing: .16em; }
 .central-visual > strong { display: block; padding: 1.2rem; border-radius: .8rem; color: #071f1a; background: var(--lima); font-size: clamp(1.7rem, 4vw, 3rem); line-height: 1; }
 .conexoes { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: .5rem; margin-top: 1rem; }
-.conexoes span { padding: .75rem .4rem; border: 1px solid rgba(255,255,255,.28); border-radius: .55rem; text-align: center; font-weight: 900; }
+.conexoes span { min-width: 0; padding: .75rem .4rem; overflow-wrap: anywhere; border: 1px solid rgba(255,255,255,.28); border-radius: .55rem; text-align: center; font-weight: 900; }
 .conexoes small { color: #b6ccc5; font-weight: 400; }
 .conexoes i { color: var(--laranja); font-style: normal; font-size: 1.3rem; font-weight: 900; }
 .linha-sinal { height: 3.5rem; display: flex; align-items: flex-end; gap: .4rem; margin-top: 1rem; }
@@ -206,8 +208,8 @@ body.alto-contraste .sensor-visual { background: #000; border-color: #fff; }
   nav ul { display: none; position: absolute; left: 1rem; right: 1rem; top: calc(100% - .35rem); flex-direction: column; padding: .75rem; border-radius: .8rem; background: var(--verde); box-shadow: var(--sombra); }
   body.alto-contraste nav ul { background: #000; border: 2px solid #fff; }
   nav ul.aberto { display: flex; }
-  .hero { min-height: auto; grid-template-columns: 1fr; }
-  .central-visual { width: min(90vw, 34rem); }
+  .hero { min-height: auto; grid-template-columns: minmax(0, 1fr); }
+  .central-visual { width: min(100%, 34rem); }
   .trilha, .cards, .cards-3, .experimento-luz, .simulador, .auditoria { grid-template-columns: 1fr; }
   .matriz-solucoes { grid-template-columns: 1fr 1fr; }
   .solucao-destaque { grid-column: span 2; }
@@ -216,15 +218,40 @@ body.alto-contraste .sensor-visual { background: #000; border-color: #fff; }
 }
 
 @media (max-width: 520px) {
-  .topo { min-height: 4.25rem; }
-  .marca span:last-child { font-size: .95rem; }
-  .barra-acessibilidade { justify-content: flex-start; }
+  .topo { min-height: 4.25rem; gap: .75rem; padding: .85rem 1rem; }
+  .marca { min-width: 0; gap: .55rem; }
+  .marca-icone { flex: 0 0 2rem; }
+  .marca span:last-child { font-size: .95rem; line-height: 1.2; }
+  .menu-botao { flex: 0 0 auto; }
+  .barra-acessibilidade { justify-content: flex-start; gap: .4rem; padding: .75rem 1rem; }
   .barra-acessibilidade > span { width: 100%; }
-  h1 { font-size: clamp(2.35rem, 13vw, 3.6rem); }
+  .barra-acessibilidade button { max-width: 100%; padding: .45rem .6rem; font-size: .92rem; }
+  h1, .hero h1 { font-size: clamp(2.65rem, 13.5vw, 3.35rem); line-height: 1.02; }
+  h2 { font-size: clamp(2rem, 10vw, 2.75rem); }
   .hero, .secao { padding-left: 1rem; padding-right: 1rem; }
+  .hero { gap: 3rem; padding-top: 2.5rem; padding-bottom: 3.5rem; }
+  .hero-etiqueta { font-size: .76rem; letter-spacing: .055em; }
+  .hero p:not(.etiqueta), .hero-introducao { max-width: 100%; font-size: 1rem !important; }
+  .hero-complemento { font-size: .95rem !important; }
+  .identificacao-escola { width: 100%; max-width: none !important; padding: .55rem .65rem; line-height: 1.4; }
+  .hero-acoes { display: grid; grid-template-columns: minmax(0, 1fr); align-items: stretch; }
+  .hero-acoes a { width: 100%; margin-top: 0; text-align: center; }
+  .dica-teclado { line-height: 1.45; }
+  .central-visual { width: calc(100% - .5rem); padding: .9rem; border-radius: 1.1rem; box-shadow: .5rem .5rem 0 var(--lima); }
+  .central-visual > p { margin-bottom: .8rem; font-size: .68rem !important; letter-spacing: .12em; }
+  .central-visual > strong { padding: 1rem .65rem; overflow-wrap: anywhere; font-size: clamp(1.45rem, 8vw, 2rem); text-align: center; }
+  .conexoes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .4rem; }
+  .conexoes i { display: none; }
+  .conexoes span { padding: .65rem .2rem; font-size: .82rem; line-height: 1.25; }
+  .conexoes small { display: block; margin-top: .25rem; font-size: .68rem; line-height: 1.2; }
+  .linha-sinal { height: 2.75rem; gap: .25rem; }
+  .secao { padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .autoria-projeto { grid-template-columns: 1fr; }
-  footer { flex-direction: column; }
+  .card, .solucao, fieldset, #atlasConteudo, .painel-leitura { padding: 1.1rem; }
+  .manifesto blockquote { font-size: clamp(1.8rem, 9vw, 2.5rem); }
+  footer { flex-direction: column; padding: 2rem 1rem; }
   .matriz-solucoes, .painel-metricas, .principios, .circuito-logico { grid-template-columns: 1fr; }
   .solucao-destaque { grid-column: auto; }
-  .atlas-cientifico { grid-template-columns: 1fr 1fr; }
+  .atlas-cientifico { grid-template-columns: 1fr; }
+  .atlas-aba { width: 100%; }
 }
